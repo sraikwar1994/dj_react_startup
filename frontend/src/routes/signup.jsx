@@ -7,7 +7,7 @@ function SignUp(props) {
     React.useEffect(() => {
         if (props.auth_data.logged_in && props.auth_data.username === '') {
             try{
-                fetch('http://localhost:8000/api/auth/user', {
+                fetch('/api/auth/user', {
                     headers: {
                         Authorization: `JWT ${localStorage.getItem('token')}`
                     }
@@ -38,7 +38,7 @@ function SignUp(props) {
 
     const handle_signup = (e, data, set_auth_data) => {
         e.preventDefault();
-        fetch('http://localhost:8000/api/auth/user/create/', {
+        fetch('/api/auth/user/create/', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
