@@ -2,6 +2,7 @@ import React from "react";
 import LoginForm from "../components/forms/LoginForm";
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
+import axios from "axios";
 
 function Login(props) {
     const navigate = useNavigate();
@@ -49,26 +50,23 @@ function Login(props) {
 
     const handle_login = (e, data) => {
         e.preventDefault();
-        fetch('/api/auth/token/', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(data)
-        })
-          .then(res => res.json())
-          .then(json => {
-            localStorage.setItem('token', json.access);
-            localStorage.setItem('refresh', json.refresh);
-            props.set_auth_data({
+
+        axios.post('/api/auth/token/', data)
+          .then((res) => {
+            const json = res.data;
+            if(res.status === 200) {
+                localStorage.setItem('token', json.access);
+                localStorage.setItem('refresh', json.refresh);
+                props.set_auth_data({
                 logged_in: true,
                 username: json.username
             })
-          });
+            }
+          })
       };
-    
 
-    return (
+
+      return (
         <div>
             {<LoginForm handle_login={handle_login} />}
         </div>

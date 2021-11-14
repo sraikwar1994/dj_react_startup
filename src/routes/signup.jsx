@@ -1,54 +1,27 @@
 import React from "react";
 import SignupForm from "../components/forms/SignupForm";
 import PropTypes from 'prop-types';
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function SignUp(props) {
-
-    React.useEffect(() => {
-        if (props.auth_data.logged_in && props.auth_data.username === '') {
-            try{
-                fetch('/api/auth/user', {
-                    headers: {
-                        Authorization: `JWT ${localStorage.getItem('token')}`
-                    }
-                }).then(res => {
-                    if(res.status === 200) {
-                        const json = res.json();
-                        props.set_auth_data({
-                            logged_in: true,
-                            username: json.username
-                        })
-                    }else{
-                        localStorage.removeItem('token');
-                        localStorage.removeItem('refresh');
-                        props.set_auth_data({
-                            logged_in: false,
-                            username: ''
-                        })
-    
-                    }
-                })
-
-            } catch(e){
-                console.log(e)
-            }
-        }
-
-    }, [props]);
+    const navigate = useNavigate();
 
     const handle_signup = (e, data, set_auth_data) => {
         e.preventDefault();
-        fetch('/api/auth/user/create/', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(data)
-        })
-          .then(res => res.json())
-          .then(json => {
-            // Todo: implement success message
-          });
+        axios.post('/api/auth/user/create/', data)
+          .then((res) => {
+              console.log(res)
+            if(res.status === 201) {
+                navigate('/login', 
+                    { 
+                        replace: true, auth_data: 
+                        props.auth_data, set_auth_data: 
+                        props.set_auth_data
+                    }
+                );
+            }
+          })
       };
     return (
         <div>

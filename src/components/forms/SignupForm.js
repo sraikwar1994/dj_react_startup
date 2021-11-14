@@ -23,7 +23,7 @@ function SignupForm(props) {
 
     return (
         <main className="form-sigin">
-          <form  onSubmit={e => props.handle_login(e, user)}>
+          <form  onSubmit={e => props.handle_signup(e, user)}>
             <h1 className="h3 mb-3 fw-normal">Please signup </h1>
             <div className="form-floating">
               <input 
