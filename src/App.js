@@ -28,7 +28,7 @@ function App() {
 
   return (
         <BrowserRouter>
-          <header className="p-3 bg-dark text-white">
+          {/* <header className="p-3 bg-dark text-white">
               <div className="container">
                   <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                       <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
@@ -37,7 +37,7 @@ function App() {
                       <Nav auth_data={auth_data} set_auth_data={set_auth_data} logged_in_nav={auth_data.logged_in ? true : false } />
                   </div>
               </div>
-          </header>
+          </header> */}
           <Routes>
             <Route path="/" element={<Home auth_data={auth_data} set_auth_data={set_auth_data} /> } />
             <Route path="login" element={<Login auth_data={auth_data} set_auth_data={set_auth_data} />} />
