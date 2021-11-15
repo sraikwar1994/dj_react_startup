@@ -25,7 +25,7 @@ function SignupForm(props) {
         <main className="form-sigin">
           <form  onSubmit={e => props.handle_signup(e, user)}>
             <h1 className="h3 mb-3 fw-normal">Please signup </h1>
-            <div className="form-floating">
+            <div className="form-floating my-2">
               <input 
               className="form-control" 
               id="floatingInput" 
@@ -37,7 +37,7 @@ function SignupForm(props) {
               required />
               <label htmlFor="floatingInput">Username</label>
             </div>
-            <div className="form-floating">
+            <div className="form-floating my-2">
               <input 
               type="email" 
               className="form-control" 
@@ -49,7 +49,7 @@ function SignupForm(props) {
               required />
               <label htmlFor="floatingPassword">Email</label>
             </div>
-            <div className="form-floating">
+            <div className="form-floating my-2">
               <input 
               type="password" 
               className="form-control" 
@@ -62,7 +62,6 @@ function SignupForm(props) {
               <label htmlFor="floatingPassword">Password</label>
             </div>
             <button className="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-            <p className="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
       </form>
     </main>
     )

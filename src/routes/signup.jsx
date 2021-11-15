@@ -24,9 +24,9 @@ function SignUp(props) {
           })
       };
     return (
-        <div>
+        <>
             {<SignupForm handle_signup={handle_signup} />}
-        </div>
+        </>
     );
 }
 

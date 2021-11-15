@@ -67,9 +67,9 @@ function Login(props) {
 
 
       return (
-        <div>
+        <>
             {<LoginForm handle_login={handle_login} />}
-        </div>
+        </>
     );
 }
 

@@ -25,11 +25,11 @@
   .form-signin .checkbox {
     font-weight: 400;
   }
-  
+/*   
   .form-signin .form-floating:focus-within {
     z-index: 2;
   }
-  
+   */
   .form-signin input[type="email"] {
     margin-bottom: -1px;
     border-bottom-right-radius: 0;
@@ -41,10 +41,16 @@
     border-top-left-radius: 0;
     border-top-right-radius: 0;
   }
-  
+
+body{
+  position: relative;
+}
   
 main.form-sigin {
-    width: 400px;
-    transform: translate(50%, 50%);
-    margin-left: 280px;
+  position: absolute;
+  top: 350px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  z-index: 0;
 }

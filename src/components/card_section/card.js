@@ -5,8 +5,8 @@ function Card(props) {
     return (
         <>
         {cards_details.map((card) => 
-            <div key={card.id} className="col-md-3">
-                <div className="card border-dark mb-3" style={{maxWidth:'18rem'}}>
+            <div key={card.id} className="col-md-3 col-sm-12">
+                <div className="card border-dark mb-3">
                     <div className="card-header">{card.header}</div>
                         <div className="card-body text-dark">
                         <h5 className="card-title">{card.title}</h5>
