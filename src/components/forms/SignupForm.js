@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import './auth_form.css';
 
 function SignupForm(props) {
+    require('./backgroud.css');
+
     const [user, setUserCreds] = React.useState({
         'username': '',
         'password': '',
