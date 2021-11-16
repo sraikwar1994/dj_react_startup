@@ -2,8 +2,9 @@ import React from 'react';
 import Chart from 'react-apexcharts';
 
 
+
 function DashboardPage(props) {
-    require("../../assets/dashboard/css/bootstrap.css");
+    require("../../../node_modules/bootstrap/dist/css/bootstrap.min.css");
     require("../../assets/dashboard/vendors/iconly/bold.css");
     require("../../assets/dashboard/vendors/perfect-scrollbar/perfect-scrollbar.css");
     require("../../assets/dashboard/vendors/bootstrap-icons/bootstrap-icons.css");
