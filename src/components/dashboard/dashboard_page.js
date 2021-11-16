@@ -125,7 +125,7 @@ function DashboardPage(props) {
                                     <a href="/dashboard"><img src={require("../../assets/dashboard/images/logo/logo.png")} alt="Logo" srcSet="" /></a>
                                 </div>
                                 <div className="toggler">
-                                    <a href="!#" className="sidebar-hide d-xl-none d-block"><i className="bi bi-x bi-middle"></i></a>
+                                    <a href="#!" className="sidebar-hide d-xl-none d-block"><i className="bi bi-x bi-middle"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -141,7 +141,7 @@ function DashboardPage(props) {
                                 </li>
 
                                 <li className="sidebar-item  has-sub">
-                                    <a href="!#" className='sidebar-link'>
+                                    <a href="#!" className='sidebar-link'>
                                         <i className="bi bi-stack"></i>
                                         <span>Components</span>
                                     </a>
@@ -192,7 +192,7 @@ function DashboardPage(props) {
                                 </li>
 
                                 <li className="sidebar-item  has-sub">
-                                    <a href="!#" className='sidebar-link'>
+                                    <a href="#!" className='sidebar-link'>
                                         <i className="bi bi-collection-fill"></i>
                                         <span>Extra Components</span>
                                     </a>
@@ -216,7 +216,7 @@ function DashboardPage(props) {
                                 </li>
 
                                 <li className="sidebar-item  has-sub">
-                                    <a href="!#" className='sidebar-link'>
+                                    <a href="#!" className='sidebar-link'>
                                         <i className="bi bi-grid-1x2-fill"></i>
                                         <span>Layouts</span>
                                     </a>
@@ -239,7 +239,7 @@ function DashboardPage(props) {
                                 <li className="sidebar-title">Forms &amp; Tables</li>
 
                                 <li className="sidebar-item  has-sub">
-                                    <a href="!#" className='sidebar-link'>
+                                    <a href="#!" className='sidebar-link'>
                                         <i className="bi bi-hexagon-fill"></i>
                                         <span>Form Elements</span>
                                     </a>
@@ -273,7 +273,7 @@ function DashboardPage(props) {
                                 </li>
 
                                 <li className="sidebar-item  has-sub">
-                                    <a href="!#" className='sidebar-link'>
+                                    <a href="#!" className='sidebar-link'>
                                         <i className="bi bi-pen-fill"></i>
                                         <span>Form Editor</span>
                                     </a>
@@ -310,7 +310,7 @@ function DashboardPage(props) {
                                 <li className="sidebar-title">Extra UI</li>
 
                                 <li className="sidebar-item  has-sub">
-                                    <a href="!#" className='sidebar-link'>
+                                    <a href="#!" className='sidebar-link'>
                                         <i className="bi bi-pentagon-fill"></i>
                                         <span>Widgets</span>
                                     </a>
@@ -328,7 +328,7 @@ function DashboardPage(props) {
                                 </li>
 
                                 <li className="sidebar-item  has-sub">
-                                    <a href="!#" className='sidebar-link'>
+                                    <a href="#!" className='sidebar-link'>
                                         <i className="bi bi-egg-fill"></i>
                                         <span>Icons</span>
                                     </a>
@@ -346,7 +346,7 @@ function DashboardPage(props) {
                                 </li>
 
                                 <li className="sidebar-item  has-sub">
-                                    <a href="!#" className='sidebar-link'>
+                                    <a href="#!" className='sidebar-link'>
                                         <i className="bi bi-bar-chart-fill"></i>
                                         <span>Charts</span>
                                     </a>
@@ -368,7 +368,7 @@ function DashboardPage(props) {
                                 </li>
 
                                 <li className="sidebar-item  has-sub">
-                                    <a href="!#" className='sidebar-link'>
+                                    <a href="#!" className='sidebar-link'>
                                         <i className="bi bi-map-fill"></i>
                                         <span>Maps</span>
                                     </a>
@@ -413,7 +413,7 @@ function DashboardPage(props) {
                                 </li>
 
                                 <li className="sidebar-item  has-sub">
-                                    <a href="!#" className='sidebar-link'>
+                                    <a href="#!" className='sidebar-link'>
                                         <i className="bi bi-person-badge-fill"></i>
                                         <span>Authentication</span>
                                     </a>
@@ -431,7 +431,7 @@ function DashboardPage(props) {
                                 </li>
 
                                 <li className="sidebar-item  has-sub">
-                                    <a href="!#" className='sidebar-link'>
+                                    <a href="#!" className='sidebar-link'>
                                         <i className="bi bi-x-octagon-fill"></i>
                                         <span>Errors</span>
                                     </a>
@@ -478,7 +478,7 @@ function DashboardPage(props) {
                 </div>
                 <div id="main">
                     <header className="mb-3">
-                        <a href="!#" className="burger-btn d-block d-xl-none">
+                        <a href="#!" className="burger-btn d-block d-xl-none">
                             <i className="bi bi-justify fs-3"></i>
                         </a>
                     </header>
