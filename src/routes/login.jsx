@@ -9,7 +9,7 @@ function Login(props) {
     React.useEffect(() => {
         if (props.auth_data.logged_in && props.auth_data.username === '') {
             try{
-                fetch('/api/auth/user', {
+                fetch('http://localhost:8000/api/auth/user', {
                     headers: {
                         Authorization: `JWT ${localStorage.getItem('token')}`
                     }
@@ -51,7 +51,7 @@ function Login(props) {
     const handle_login = (e, data) => {
         e.preventDefault();
 
-        axios.post('/api/auth/token/', data)
+        axios.post('http://localhost:8000/api/auth/token/', data)
           .then((res) => {
             const json = res.data;
             if(res.status === 200) {
