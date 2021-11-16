@@ -9,7 +9,7 @@ function SignUp(props) {
 
     const handle_signup = (e, data, set_auth_data) => {
         e.preventDefault();
-        axios.post('/api/auth/user/create/', data)
+        axios.post(localStorage.getItem('api_url') + 'api/auth/user/create/', data)
           .then((res) => {
               console.log(res)
             if(res.status === 201) {

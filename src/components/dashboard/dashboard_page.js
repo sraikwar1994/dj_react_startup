@@ -1,14 +1,13 @@
 import React from 'react';
-import "../../assets/dashboard/vendors/iconly/bold.css";
-import "../../assets/dashboard/vendors/perfect-scrollbar/perfect-scrollbar.css";
-import "../../assets/dashboard/vendors/bootstrap-icons/bootstrap-icons.css";
-import "../../assets/dashboard/css/app.css";
-
 import Chart from 'react-apexcharts';
 
 
 function DashboardPage(props) {
-
+    require("../../assets/dashboard/css/bootstrap.css");
+    require("../../assets/dashboard/vendors/iconly/bold.css");
+    require("../../assets/dashboard/vendors/perfect-scrollbar/perfect-scrollbar.css");
+    require("../../assets/dashboard/vendors/bootstrap-icons/bootstrap-icons.css");
+    require("../../assets/dashboard/css/app.css");
 
     const optionsProfileVisit = {
         annotations: {

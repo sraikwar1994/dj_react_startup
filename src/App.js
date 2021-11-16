@@ -1,6 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import Nav from './components/header/nav';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Login from './routes/login';
 import SignUp from './routes/signup';
 import Home from './routes/home';
@@ -14,6 +13,7 @@ function App() {
     username: ''
   })
 
+
   React.useEffect(() => {
     if (auth_data.logged_in && localStorage.getItem('token') === null) {
       set_auth_data({
@@ -25,6 +25,10 @@ function App() {
     }
   }, [auth_data])
 
+  if (!localStorage.getItem('api_url')) {
+      const api_url = window.location.href === 'http://localhost:3000/' ? 'http://localhost:8000/' : '/';
+      localStorage.setItem('api_url', api_url);
+  }
 
   return (
         <BrowserRouter>

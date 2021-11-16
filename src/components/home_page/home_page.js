@@ -1,5 +1,4 @@
 import React from 'react';
-
 import icon_1 from '../../assets/landing/assets/img/category/icon1.png';
 import icon_2 from '../../assets/landing/assets/img/category/icon2.png';
 import icon_3 from '../../assets/landing/assets/img/category/icon3.png';
@@ -9,11 +8,12 @@ import hero_img from "../../assets/landing/assets/img/hero/hero-img.png";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faFacebookF, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import '../../assets/landing/assets/css/theme.css';
+
 
 
 function HomePage(props) {
-
+    require('../../assets/landing/assets/css/theme.css');
+    
     const facebook_icon = <FontAwesomeIcon icon={faFacebookF} />
     const instagram_icon = <FontAwesomeIcon icon={faInstagram} />
     const twitter_icon = <FontAwesomeIcon icon={faTwitter} />
