@@ -4,6 +4,7 @@ import './auth_form.css';
 
 function SignupForm(props) {
     require('./backgroud.css');
+    require('../../assets/landing/assets/css/theme.css');
 
     const [user, setUserCreds] = React.useState({
         'username': '',
@@ -24,6 +25,9 @@ function SignupForm(props) {
     }
 
     return (
+      <>
+        <div className="background_image"></div>
+      
         <main className="form-sigin">
           <form  onSubmit={e => props.handle_signup(e, user)}>
             <h1 className="h3 mb-3 fw-normal">Please signup </h1>
@@ -66,6 +70,8 @@ function SignupForm(props) {
             <button className="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
       </form>
     </main>
+    </>
+
     )
   
 }
