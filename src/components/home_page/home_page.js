@@ -13,17 +13,27 @@ import {faFacebookF, faInstagram, faTwitter } from '@fortawesome/free-brands-svg
 
 function HomePage(props) {
     require('../../assets/landing/assets/css/theme.css');
-    
+    const [isActive, setActive] = React.useState(false);
+
     const facebook_icon = <FontAwesomeIcon icon={faFacebookF} />
     const instagram_icon = <FontAwesomeIcon icon={faInstagram} />
     const twitter_icon = <FontAwesomeIcon icon={faTwitter} />
+    const header_disable = "navbar navbar-expand-lg navbar-light fixed-top py-5 d-block";
+    const header_enable = "navbar navbar-expand-lg navbar-light fixed-top py-5 d-block bg-light";
+
+    const mobile_header = "navbar-collapse border-top border-lg-0 mt-4 mt-lg-0 collapse";
+    const mobile_header_enable = "navbar-collapse border-top border-lg-0 mt-4 mt-lg-0";
+    const toggleClass = () => {
+        setActive(!isActive);
+      };
+    
     return (
         <>
             <main className="main" id="top">
-            <nav className="navbar navbar-expand-lg navbar-light fixed-top py-5 d-block" data-navbar-on-scroll="data-navbar-on-scroll">
+            <nav className={isActive ? header_enable : header_disable}   data-navbar-on-scroll="data-navbar-on-scroll">
                 <div className="container"><a className="navbar-brand" href="index.html"><img src={require('../../assets/landing/assets/img/logo.svg')} height="34" alt="logo" /></a>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span className="navbar-toggler-icon"> </span></button>
-                <div className="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+                <button onClick={toggleClass} className={ isActive ? "navbar-toggler" : "navbar-toggler collapsed"} type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span className="navbar-toggler-icon"> </span></button>
+                <div className={isActive ? mobile_header_enable : mobile_header} id="navbarSupportedContent">
                     <ul className="navbar-nav ms-auto pt-2 pt-lg-0 font-base align-items-lg-center align-items-start">
                     <li className="nav-item px-3 px-xl-4"><a className="nav-link fw-medium" aria-current="page" href="#service">Service</a></li>
                     <li className="nav-item px-3 px-xl-4"><a className="nav-link fw-medium" aria-current="page" href="#destination">Destination</a></li>
