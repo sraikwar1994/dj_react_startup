@@ -18,8 +18,8 @@ function HomePage(props) {
     const facebook_icon = <FontAwesomeIcon icon={faFacebookF} />
     const instagram_icon = <FontAwesomeIcon icon={faInstagram} />
     const twitter_icon = <FontAwesomeIcon icon={faTwitter} />
-    const header_disable = "navbar navbar-expand-lg navbar-light fixed-top py-5 d-block";
-    const header_enable = "navbar navbar-expand-lg navbar-light fixed-top py-5 d-block bg-light";
+    const header_disable = "navbar-collapse navbar-expand-lg navbar-light fixed-top py-5 d-block";
+    const header_enable = "navbar-collapse navbar-expand-lg navbar-light fixed-top py-5 d-block bg-light";
 
     const mobile_header = "navbar-collapse border-top border-lg-0 mt-4 mt-lg-0 collapse";
     const mobile_header_enable = "navbar-collapse border-top border-lg-0 mt-4 mt-lg-0";
