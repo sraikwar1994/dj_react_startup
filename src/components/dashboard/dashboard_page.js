@@ -114,7 +114,7 @@ function DashboardPage(props) {
         colors: ['#dc3545'],
     }
 
-    const [isActive, setActive] = React.useState(false);
+    const [isActive, setActive] = React.useState(true);
     function handleClick() {
         setActive(!isActive);
     }
