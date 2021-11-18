@@ -114,10 +114,15 @@ function DashboardPage(props) {
         colors: ['#dc3545'],
     }
 
+    const [isActive, setActive] = React.useState(false);
+    function handleClick() {
+        setActive(!isActive);
+    }
+
     return (
         <>
             <div id="app">
-                <div id="sidebar" className="active">
+                <div id="sidebar" className={isActive ? 'active' : ''}>
                     <div className="sidebar-wrapper active">
                         <div className="sidebar-header">
                             <div className="d-flex justify-content-between">
@@ -125,7 +130,7 @@ function DashboardPage(props) {
                                     <a href="/dashboard"><img src={require("../../assets/dashboard/images/logo/logo.png")} alt="Logo" srcSet="" /></a>
                                 </div>
                                 <div className="toggler">
-                                    <a href="#!" className="sidebar-hide d-xl-none d-block"><i className="bi bi-x bi-middle"></i></a>
+                                    <a href="#!" className="sidebar-hide d-xl-none d-block"><i onClick={handleClick} className="bi bi-x bi-middle"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -478,7 +483,7 @@ function DashboardPage(props) {
                 </div>
                 <div id="main">
                     <header className="mb-3">
-                        <a href="#!" className="burger-btn d-block d-xl-none">
+                        <a onClick={handleClick} href="#!" className={ isActive ? "burger-btn d-xl-none" : "burger-btn d-block d-xl-none"}>
                             <i className="bi bi-justify fs-3"></i>
                         </a>
                     </header>
